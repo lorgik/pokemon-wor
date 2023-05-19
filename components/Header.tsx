@@ -14,7 +14,9 @@ const Header = () => {
           height="50"
         />
       </Link>
-      <h1 className={styles.title}>Pokemon World</h1>
+      <Link className={styles.link} href="/pokedex">
+        Pokedex
+      </Link>
     </header>
   );
 };

@@ -27,7 +27,9 @@ const Pokedex = async () => {
               }.png`})`,
             }}
           >
-            <h3>{ucFirst(pokemon.name)}</h3>
+            <h3>
+              №{index + 1} {ucFirst(pokemon.name)}
+            </h3>
           </div>
         </Link>
       ))}

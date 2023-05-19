@@ -1,3 +1,94 @@
+$color-bug: #729f3f;
+$color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+$color-fairy: #fdb9e9;
+$color-fire: #fd7d24;
+$color-ghost: #7b62a3;
+$color-ground: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+$color-normal: #a4acaf;
+$color-psychik: #f366b9;
+$color-steel: #9eb7b8;
+$color-dark: #707070;
+$color-electric: #eed535;
+$color-fighting: #d56723;
+$color-flying: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+$color-grass: #9bcc50;
+$color-ice: #51c4e7;
+$color-poison: #b97fc9;
+$color-rock: #a38c21;
+$color-water: #4592c4;
+
+.bug {
+  background: $color-bug;
+}
+
+.dragon {
+  background: $color-dragon;
+}
+
+.fairy {
+  background: $color-fairy;
+}
+
+.fire {
+  background: $color-fire;
+}
+
+.ghost {
+  background: $color-ghost;
+}
+
+.ground {
+  background: $color-ground;
+}
+
+.normal {
+  background: $color-normal;
+}
+
+.psychik {
+  background: $color-psychik;
+}
+
+.steel {
+  background: $color-steel;
+}
+
+.dark {
+  background: $color-dark;
+}
+
+.electric {
+  background: $color-electric;
+}
+
+.fighting {
+  background: $color-fighting;
+}
+
+.flying {
+  background: $color-flying;
+}
+
+.grass {
+  background: $color-grass;
+}
+
+.ice {
+  background: $color-ice;
+}
+
+.poison {
+  background: $color-poison;
+}
+
+.rock {
+  background: $color-rock;
+}
+
+.water {
+  background: $color-water;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +101,11 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }
 
 .wrapper {

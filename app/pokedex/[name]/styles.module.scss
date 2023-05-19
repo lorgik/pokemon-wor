@@ -8,51 +8,116 @@
   .card {
     background-color: #ffffff;
     color: #2c2c2c;
-    border-radius: 30px;
+    border-radius: 40px;
 
     width: 100%;
 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-between;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 45%;
     overflow: hidden;
+
+    > .title {
+      padding: 15px;
+
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 500;
+      letter-spacing: 1px;
+
+      color: #fff;
+      background-color: #2c2c2c;
+    }
 
     .name {
       padding: 15px;
 
       text-align: center;
       font-size: 2.5em;
+      font-weight: 500;
       letter-spacing: 1px;
 
-      background-color: #2c2c2c;
-      color: #fff;
+      color: #2c2c2c;
+
+      .grass {
+        background-color: red;
+      }
     }
   }
 
   .info {
     background-color: #ffffff;
     color: #2c2c2c;
-    border-radius: 30px;
-
-    display: flex;
-    flex-direction: column-reverse;
+    border-radius: 40px;
 
     overflow: hidden;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 100%;
 
-    .title {
+    > .title {
       padding: 15px;
 
       text-align: center;
       font-size: 2.5em;
+      font-weight: 500;
       letter-spacing: 1px;
 
       background-color: #2c2c2c;
       color: #fff;
+    }
+
+    .feature {
+      .ability {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 20px;
+
+        font-size: 1.3em;
+
+        .hidden {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .title {
+            border-bottom: 1px solid #2c2c2c;
+          }
+
+          .value {
+            padding-top: 5px;
+            font-weight: 500;
+          }
+        }
+      }
+      .stats {
+        padding-bottom: 50px;
+        .stat {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 20px;
+
+          font-size: 1.3em;
+
+          &:nth-child(2n - 1) {
+            background-color: #eee;
+          }
+        }
+      }
+      .type {
+        padding: 15px;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 500;
+      }
     }
   }
 }
