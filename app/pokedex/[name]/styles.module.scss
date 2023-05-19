@@ -5,6 +5,11 @@
   gap: 20px;
   grid-template-columns: 1fr 1fr;
 
+  @media screen and (max-width: 480px) {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+
   .card {
     background-color: #ffffff;
     color: #2c2c2c;

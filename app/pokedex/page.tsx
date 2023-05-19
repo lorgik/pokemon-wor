@@ -18,19 +18,19 @@ const Pokedex = async () => {
   return (
     <main className={styles.main}>
       {pokemons.map((pokemon: Pokemon, index: number) => (
-        <Link href={`/pokedex/${pokemon.name}`} key={index}>
-          <div
-            className={styles.card}
-            style={{
-              backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
-                index + 1
-              }.png`})`,
-            }}
-          >
-            <h3>
-              №{index + 1} {ucFirst(pokemon.name)}
-            </h3>
-          </div>
+        <Link
+          href={`/pokedex/${pokemon.name}`}
+          key={index}
+          className={styles.card}
+          style={{
+            backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+              index + 1
+            }.png`})`,
+          }}
+        >
+          <h3>
+            #{index + 1} {ucFirst(pokemon.name)}
+          </h3>
         </Link>
       ))}
     </main>
