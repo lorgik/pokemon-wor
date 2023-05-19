@@ -1,0 +1,78 @@
+.main {
+  padding: 20px 20px 0 20px;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+
+  // $count: 1;
+
+  // @while $count < 100 {
+  //   a:nth-of-type(#{$count}) .card {
+  //     animation: show #{$count * 1 / 10}s ease-in;
+  //   }
+
+  //   $count: $count + 1;
+  // }
+
+  // @media screen and (max-width: 480px) {
+  //   gap: 15px;
+  //   padding: 15px 15px 0 15px;
+  // }
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+}
+
+.card {
+  color: #fff;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+
+  min-height: 200px;
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+
+  cursor: pointer;
+  transition: background-size 0.2s ease-in-out;
+
+  @media screen and (max-width: 480px) {
+    min-width: 200px;
+    min-height: 100px;
+  }
+
+  &:hover {
+    background-size: 45%;
+  }
+
+  h3 {
+    background-color: #333232;
+
+    font-weight: 500;
+
+    padding: 5px 15px;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
