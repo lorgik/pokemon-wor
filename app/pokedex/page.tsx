@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
-import { ucFirst } from '@/global/functions';
+import { capitalize } from '@/global/functions';
 
-async function getData() {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=50');
+const limit = 100;
+
+async function getPokemons() {
+  const response = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/?limit=${limit}`
+  );
   return response.json().then((data) => data.results);
 }
 
@@ -13,7 +17,7 @@ type Pokemon = {
 };
 
 const Pokedex = async () => {
-  const pokemons = await getData();
+  const pokemons: Pokemon[] = await getPokemons();
 
   return (
     <main className={styles.main}>
@@ -29,7 +33,7 @@ const Pokedex = async () => {
           }}
         >
           <h3>
-            #{index + 1} {ucFirst(pokemon.name)}
+            #{index + 1} {capitalize(pokemon.name)}
           </h3>
         </Link>
       ))}

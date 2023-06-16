@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 70px;
+
+  .title {
+    font-size: 5.5rem;
+    line-height: 1.2;
+    text-wrap: balance;
+
+    text-align: center;
+    color: #353535;
+
+    .highlight {
+      color: #f26210;
+    }
+  }
+
+  .link {
+    padding: 20px 30px;
+
+    box-shadow: 0px 10px 40px rgba(227, 93, 18, 0.2);
+    border-radius: 10px;
+
+    background-color: #f26210;
+    color: #ffffff;
+
+    font-size: 1.2rem;
+
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: #d4611e;
+    }
+  }
+}

@@ -6,7 +6,7 @@ import styles from '@/styles/Header.module.scss';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Link href="/pokedex">
+      <Link className={styles.link} href="/">
         <Image
           src="https://cdn-icons-png.flaticon.com/512/361/361998.png"
           alt="pokemon logo"
@@ -15,7 +15,13 @@ const Header = () => {
         />
       </Link>
       <Link className={styles.link} href="/pokedex">
-        Pokedex
+        <span>Pokedex</span>
+        <Image
+          src="https://cdn-icons-png.flaticon.com/512/188/188940.png"
+          alt="pokedex"
+          width="50"
+          height="50"
+        ></Image>
       </Link>
     </header>
   );
