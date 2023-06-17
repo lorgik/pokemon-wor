@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import styles from './styles.module.scss';
+
 import { capitalize } from '@/global/functions';
 
-const limit = 100;
+import styles from './styles.module.scss';
+
+const limit = 120;
 
 async function getPokemons() {
   const response = await fetch(
@@ -33,7 +35,8 @@ const Pokedex = async () => {
           }}
         >
           <h3>
-            #{index + 1} {capitalize(pokemon.name)}
+            {/* #{index + 1} {capitalize(pokemon.name)} */}
+            {capitalize(pokemon.name)}
           </h3>
         </Link>
       ))}

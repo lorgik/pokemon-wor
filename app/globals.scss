@@ -46,6 +46,13 @@ li {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

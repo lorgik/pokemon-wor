@@ -1,6 +1,9 @@
-import styles from './styles.module.scss';
 import { Metadata } from 'next';
 import { capitalize } from '@/global/functions';
+
+import CardTitle from '@/components/CardTitle';
+
+import styles from './styles.module.scss';
 
 type Props = {
   params: {
@@ -16,13 +19,13 @@ export async function generateMetadata({
   };
 }
 
-async function getData(name: string) {
+async function getPokemon(name: string) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   return response.json();
 }
 
 const PokemonPage = async ({ params: { name } }: Props) => {
-  const pokemon = await getData(name);
+  const pokemon = await getPokemon(name);
 
   return (
     <main className={styles.page}>
@@ -32,7 +35,7 @@ const PokemonPage = async ({ params: { name } }: Props) => {
           backgroundImage: `url(${pokemon.sprites.other['official-artwork'].front_default})`,
         }}
       >
-        <h3 className={styles.title}>Номер {pokemon.id}</h3>
+        <CardTitle styles={styles} id={pokemon.id} />
         <h3 className={`${styles.name} ${pokemon.types[0].type.name}`}>
           {capitalize(pokemon.name)}
         </h3>
